@@ -1,10 +1,5 @@
-const Items = ({ nombre, visto }) => {
-  return (
-    <li>
-      {nombre} {visto ? "✅" : "❎"}
-    </li>
-  );
-};
+import { useState } from "react";
+import { Items } from "./listado";
 
 export const ListadoApp = () => {
   let listaDeSuper = [
@@ -13,17 +8,17 @@ export const ListadoApp = () => {
     { nombre: "Helado", visto: true },
     { nombre: "Manzana", visto: false },
     { nombre: "limon", visto: false },
-  ]
+  ];
 
-  const [arreglo, setArreglo] = useState(listaDeSuper)
-  
-  
-  
+  const [arreglo, setArreglo] = useState(listaDeSuper);
+
   return (
     <>
       <h1>Lista de Super</h1>
       <ol>
-        {arreglo.map(Item => <item nombre={Items.nombre} visto= {Items.visto} />)}
+        {arreglo.map((Items) => (
+          <item nombre={ListadoApp.nombre} visto={ListadoApp.visto} />
+        ))}
       </ol>
     </>
   );
