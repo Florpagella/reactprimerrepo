@@ -16,9 +16,7 @@ export const ListadoApp = () => {
     <>
       <h1>Lista de Super</h1>
       <ol>
-        {arreglo.map((Items) => (
-          <item nombre={ListadoApp.nombre} visto={ListadoApp.visto} />
-        ))}
+        {arreglo.map(item => <item nombre={item.nombre} visto={item.visto}></item>)}
       </ol>
     </>
   );
